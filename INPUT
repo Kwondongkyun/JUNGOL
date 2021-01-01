@@ -1,0 +1,200 @@
+**자가진단**
+1)
+#include <stdio.h>
+int main(void)
+{
+    int a = -100;
+    printf("%d", a);
+    
+    return 0;
+}
+
+
+2)
+#include <stdio.h>
+int main(void)
+{
+    int a=-1;
+    int b=100;
+    printf("%d\n%d", a, b);
+     
+    return 0;
+}
+
+
+3)
+#include <stdio.h>
+int main(void)
+{
+    int a = 55, b = 10, c = 2008, d = 1999;
+     
+    printf("%d - %d = %d\n", a, b, a-b);
+    printf("%d - %d = %d", c, d, c-d);
+     
+    return 0;
+}
+
+
+4)
+#include <stdio.h>
+int main(void)
+{
+    int a = 49;
+    double b = 0.268300;
+     
+    printf("%d * %lf = %lf", a, b, a*b);
+    return 0;
+}
+
+
+5)
+#include <stdio.h>
+int main(void)
+{
+    double yd = 2.1;
+    double in = 10.5;
+    double cm1, cm2;
+ 
+    cm1 = 91.44 * yd;
+    cm2 = 2.54 * in;
+ 
+    printf("%4.1lfyd = %5.1lfcm\n", yd, cm1);
+ 
+    printf("%4.1lfin = %5.1lfcm\n\n", in, cm2);
+ 
+    return 0;
+}
+
+
+6)
+#include <stdio.h>
+int main(void)
+{
+    int height;
+ 
+    printf("height = ");
+    scanf("%d",&height);
+ 
+    printf("Your height is %dcm.", height);
+ 
+    return 0;
+}
+
+
+7)
+#include <stdio.h>
+int main(void)
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+ 
+    printf("%d * %d = %d\n", a, b, a * b);
+    printf("%d / %d = %d", a, b, a / b);
+ 
+    return 0;
+}
+
+
+8)
+#include <stdio.h>
+int main(void)
+{
+    double a, b;
+    char c;
+ 
+    scanf("%lf %lf %c", &a, &b, &c, sizeof(c));
+ 
+    printf("%.2lf\n%.2lf\n%c", a, b, c);
+ 
+    return 0;
+ 
+}
+
+
+9)
+#include <stdio.h>
+int main(void)
+{
+    double a, b, c;
+ 
+    scanf("%lf %lf %lf", &a, &b, &c);
+ 
+    printf("%.3lf\n%.3lf\n%.3lf", a, b, c);
+ 
+    return 0;
+ 
+}
+
+
+**형성평가**
+1)
+#include <stdio.h>
+int main(void)
+{
+    int a, b, c;
+    a = 10;
+    b = 20;
+    c = 30;
+ 
+    printf("%d + %d = %d", a, b, c);
+ 
+    return 0;
+}
+
+
+2)
+#include <stdio.h>
+int main(void)
+{
+    float a, b;
+    a = 80.5;
+    b = 22.34;
+ 
+    printf("     %.2f     %.2f    %.2f", a, b, a + b);
+ 
+    return 0;
+}
+
+
+3)
+#include <stdio.h>
+int main(void)
+{
+    int a = 50;
+    float b = 100.12;
+ 
+    printf("%.2f * %d = %.f", b, a, a * b);
+ 
+    return 0;
+}
+
+
+4)
+#include <stdio.h>
+int main(void)
+{
+    int a, b, c;
+ 
+    scanf("%d %d %d", &a, &b, &c);
+ 
+    printf("sum = %d\navg = %d\n\n", a + b + c, (a + b + c) / 3);
+ 
+    return 0;
+}
+
+
+5)
+#include <stdio.h>
+int main(void)
+{
+    double a, b;
+ 
+    printf("yard? ");
+    scanf("%lf", &a);
+ 
+    b = 91.44 * a;
+ 
+    printf("%.1lfyard = %.1lfcm\n\n", a, b);
+ 
+    return 0;
+} 
