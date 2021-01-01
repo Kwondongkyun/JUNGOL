@@ -1,0 +1,139 @@
+**자가진단**
+1)
+#include<stdio.h>
+int main(void)
+{
+    printf("Fun Programming!");
+    return 0;
+}
+
+
+2)
+#include <stdio.h>
+int main(void)
+{
+    printf("Programming! It's fun.");
+    return 0;
+}
+
+
+3)
+#include<stdio.h>
+int main(void)
+{
+    printf("My name is Hong Gil Dong.\nI am 13 years old.");
+    return 0;
+}
+
+
+4)
+#include <stdio.h>
+int main(void)
+{
+    printf("(@) (@)\n");
+    printf("(=^.^=)\n");
+    printf("(-m-m-)");
+     
+    return 0;
+}
+
+
+5)
+#include <stdio.h>
+int main(void)
+{
+    printf("I can program well.\nDreams come true.");
+    return 0;
+}
+
+
+6)
+#include <stdio.h>
+int main(void)
+{
+    printf("My height\n");
+    printf("170\n");
+    printf("My weight\n");
+    printf("68.600000\n");
+ 
+    return 0;
+}
+
+
+7)
+#include<stdio.h>
+int main(void)
+{
+    printf("5 Dan\n");
+    printf("5 * 2 = 10");
+ 
+    return 0;
+}
+
+
+8)
+#include<stdio.h>
+int main(void)
+{
+    printf("      item     count     price\n");
+    printf("       pen        20       100\n");
+    printf("      note         5        95\n");
+    printf("    eraser       110        97");
+ 
+    return 0;
+}
+
+
+**형성평가**
+1)
+#include <stdio.h>
+int main(void)
+{
+    printf("My name is Hong");
+ 
+    return 0;
+}
+
+
+2)
+#include <stdio.h>
+int main(void)
+{
+    printf("My hometown\nFlowering mountain");
+ 
+    return 0;
+}
+
+
+3)
+#include <stdio.h>
+int main(void)
+{
+    printf("TTTTTTTTTT\nTTTTTTTTTT\n    TT    \n    TT    \n    TT    ");
+ 
+    return 0;
+}
+
+
+4)
+#include <stdio.h>
+int main(void)
+{
+    printf("kor 90\nmat 80\neng 100\nsum 270\navg 90");
+ 
+    return 0;
+}
+
+
+5)
+#include <stdio.h>
+int main(void)
+{
+    printf("          Seoul     10,312,545        +91,375\n");
+    printf("          Pusan      3,567,910         +5,868\n");
+    printf("        Incheon      2,758,296        +64,888\n");
+    printf("          Daegu      2,511,676        +17,230\n");
+    printf("        Gwangju      1,454,636        +29,774\n");
+ 
+    return 0;
+}
