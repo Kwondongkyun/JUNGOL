@@ -1,0 +1,353 @@
+**자가진단**
+1)
+#include <stdio.h>
+int main(void)
+{
+    int n, i = 1, j = 0, sum = 0;
+    scanf("%d", &n);
+ 
+    while (1) {
+        if (i % 2 != 0)
+        {
+            sum += i;
+            j++;
+            if (sum >= n) {
+                //sum = sum - i;
+                break;
+            }
+        }
+        i++;
+    }
+    printf("%d %d", j, sum);
+ 
+    return 0;
+}
+
+
+2)
+#include <stdio.h>
+int main(void)
+{
+    int n;
+    scanf("%d", &n);
+ 
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i + 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+3)
+#include <stdio.h>
+int main(void)
+{
+    int n;
+    scanf("%d", &n);
+ 
+    for (int i = 0; i < n; i++) {
+        for (int j = n - i; j > 0; j--) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int a = 0; a < n; a++) {
+        for (int b = 1; b <= a + 1; b++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+4)
+#include <stdio.h>
+int main(void)
+{
+    int n;
+    scanf("%d", &n);
+ 
+    for (int i = 0; i < n; i++) {
+        for (int k = 0; k < i; k++) {
+            printf(" ");
+        }
+        for (int j = n - i; j > 0; j--) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+5)
+#include <stdio.h>
+int main(void)
+{
+    int n;
+    scanf("%d", &n);
+ 
+    for (int i = n; i > 0 ; i--) {
+        for (int k = n; k > i; k--) {
+            printf(" ");
+        }
+        for (int j = 0; j < 2 * i - 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+6)
+#include <stdio.h>
+int main(void)
+{
+    int n, k = 65;
+    scanf("%d", &n);
+ 
+    for (int i = n; i > 0; i--) {
+        for (int j = 0; j < i; j++) {
+            printf("%c", k);
+            k++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+7)
+#include <stdio.h>
+int main(void)
+{
+    int n, l = 65, a = 1, b = 1;
+    scanf("%d", &n);
+ 
+    for (int i = n; i > 0; i--){
+        for (int j = 1; j <= i; j++, a++) {
+            printf("%d ", a);
+        }
+        for (int k = 0; k < b; k++, l++) {
+            printf("%c ", l);
+        }
+        printf("\n");
+        b++;
+    }
+    return 0;
+}
+
+
+**형성평가**
+1)
+#include <stdio.h>
+int main(void)
+{
+    int a, sum = 0, count = 0;
+    for (int i = 0; i < 20; i++) {
+        scanf("%d", &a);
+        if (a == 0)
+            break;
+        sum += a;
+        count++;
+    }
+    printf("%d %d", sum, sum / count);
+ 
+    return 0;
+}
+
+
+2)
+#include <stdio.h>
+int main(void)
+{
+    int n;
+    scanf("%d", &n);
+ 
+    for (int i = 1; n * i <= 100; i++) {
+        printf("%d ", n * i);
+ 
+        if ((n * i) % 10 == 0)
+            break;
+    }
+    return 0;
+}
+
+
+3)
+#include <stdio.h>
+int main(void)
+{
+    int n;
+    scanf("%d", &n);
+ 
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i+1; j++)
+            printf("*");
+        printf("\n");
+    }
+    for (int i = n - 1; i > 0; i--)
+    {
+        for (int j = 0; j < i; j++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+
+
+4)
+#include <stdio.h>
+int main(void)
+{
+    int n;
+    scanf("%d", &n);
+ 
+    for (int i = n; i > 0; i--) {
+        for (int k = n; k > i; k--) {
+            printf(" ");
+        }
+        for (int j = 0; j < 2 * i - 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+  
+    for (int i = 1; i < n; i++) {
+        for (int j = n - i - 1; j > 0; j--) {
+            printf(" ");
+        }
+        for (int k = 0; k < 2*i+1; k++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+
+
+5)
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d", &a);
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < a * 2 - 2 - i * 2; j++) {
+            printf(" ");
+        }
+        for (int j = 0; j < i * 2 + 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+6)
+#include <stdio.h>
+int main(void)
+{
+    int n;
+    scanf("%d", &n);
+ 
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            printf("  ");
+        }
+        for (int j = 1; j <= i + 1; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+7)
+#include <stdio.h>
+int main(void)
+{
+    int n, k = 65, p = 0;
+    scanf("%d", &n);
+ 
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n-i; j++, k++) {
+            printf("%c ", k);
+        }
+        for (int j = 0; j < i; j++, p++) {
+            printf("%d ", p);
+        }
+        printf("\n");
+    }
+ 
+    return 0;
+}
+
+
+8)
+#include <stdio.h>
+int main(void)
+{
+    int n, k = 1;
+    scanf("%d", &n);
+ 
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i; j++) {
+            printf("  ");
+        }
+        for (int j = 0; j < n - i; j++, k++) {
+            printf("%d ", k);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+9)
+#include <stdio.h>
+int main(void)
+{
+    int n;
+    scanf("%d", &n);
+ 
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i + 1; j++) {
+            printf("# ");
+        }
+        printf("\n");
+    }
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < i + 1; j++) {
+            printf("  ");
+        }
+        for (int j = 0; j < n - i - 1; j++) {
+            printf("# ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+A)
+#include <stdio.h>
+int main()
+{
+    int n, k = 1;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%d ", k);
+            k = (k + 2) % 10;
+        }
+        printf("\n");
+    }
+    return 0;
+}
