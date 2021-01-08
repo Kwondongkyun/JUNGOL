@@ -1,0 +1,254 @@
+**자가진단**
+(1)
+#include <stdio.h>
+void print(int x);
+int main(void) {
+    int a;
+    scanf("%d", &a);
+ 
+    print(a);
+}
+void print(int x) {
+    for (int i = 0; i < x; i++) {
+        printf("~!@#$^&*()_+|\n");
+    }
+}
+
+
+(2)
+#include <stdio.h>
+#define PI 3.14
+void circle(int a);
+int main(void)
+{
+    int a;
+    scanf("%d", &a);
+ 
+    circle(a);
+}
+void circle(int a) {
+    printf("%.2lf", (double)a * (double)a * PI);
+}
+
+
+(3)
+#include <stdio.h>
+void square(int x);
+int main(void)
+{
+    int a;
+    scanf("%d", &a);
+ 
+    square(a);
+}
+void square(int x) {
+    int k = 1;
+    for (int i = 0; i < x; i++) {
+        for (int j = 0; j < x; j++) {
+            printf("%d ", k);
+            k++;
+        }
+        printf("\n");
+    }
+}
+
+
+(4)
+#include <stdio.h>
+void print_max(int x, int y, int z);
+int main(void)
+{
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+ 
+    print_max(a, b, c);
+}
+void print_max(int x, int y, int z) {
+    x > y&& x > z ? printf("%d", x) : y > z ? printf("%d", y) : printf("%d", z);
+}
+
+
+(5)
+#include <stdio.h>
+#include <math.h>
+void print_pow(int x, int y);
+int main(void) {
+    int a, b;
+    scanf("%d %d", &a, &b);
+ 
+    print_pow(a, b);
+}
+void print_pow(int x, int y) {
+    printf("%.lf", pow(x, y));
+}
+
+
+(6)
+#include <stdio.h>
+void calculator(int x, char y, int z) {
+    if (y == '+')   printf("%d + %d = %d", x, z, x + z);
+    else if (y == '-')  printf("%d - %d = %d", x, z, x - z);
+    else if (y == '*')  printf("%d * %d = %d", x, z, x * z);
+    else if (y == '/')  printf("%d / %d = %d", x, z, x / z);
+    else printf("%d %c %d = %d", x, y, z, 0);
+}
+int main(void) {
+    int a, c;
+    char b;
+    scanf("%d %c %d", &a, &b, &c, sizeof(b));
+ 
+    calculator(a, b, c);
+}
+
+
+(7)
+#include <stdio.h>
+void print(int x, int y);
+int main(void)
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+ 
+    print(a, b);
+}
+void print(int x, int y) {
+    if (x > y)
+        printf("%d %d", x / 2, y * 2);
+    else
+        printf("%d %d", x * 2, y / 2);
+}
+
+
+(8)
+#include <stdio.h>
+void print_num(int x, int y) {
+    if (x < y) {
+        for (int j = x; j < y + 1; j++) {
+            printf("== %ddan ==\n", j);
+            for (int i = 1; i < 10; i++)
+                printf("%d * %d = %2d\n", j, i, j * i);
+            printf("\n");
+        }
+    }
+    else {
+        for (int j = y; j < x + 1; j++) {
+            printf("== %ddan ==\n", j);
+            for (int i = 1; i < 10; i++)
+                printf("%d * %d = %2d\n", j, i, j * i);
+            printf("\n");
+        }
+    }
+ 
+}
+int main(void) {
+    int a, b;
+    scanf("%d %d", &a, &b);
+ 
+    print_num(a, b);
+}
+
+
+**형성평가**
+(1)
+#include <stdio.h>
+void print(void);
+int main(void) {
+    printf("first\n");
+    print();
+    printf("second\n");
+    print();
+    printf("third\n");
+    print();
+}
+void print(void) {
+    printf("@@@@@@@@@@\n");
+}
+
+
+(2)
+#include <stdio.h>
+void print_sum(int x);
+int main(void) {
+    int a;
+    scanf("%d", &a);
+ 
+    print_sum(a);
+}
+void print_sum(int x) {
+    int sum = 0;
+    for (int i = 1; i < x + 1; i++) {
+        sum += i;
+    }
+    printf("%d", sum);
+}
+
+
+(3)
+#include <stdio.h>
+void print_square(int x);
+int main(void) {
+    int a;
+    scanf("%d", &a);
+ 
+    print_square(a);
+}
+void print_square(int x) {
+    for (int i = 1; i < x+1; i++) {
+        for (int j = 0; j < x; j++)
+            printf("%d ", (j + 1) * i);
+        printf("\n");
+    }
+}
+
+
+(4)
+#include <stdio.h>
+#include <math.h>
+void print_sub(int x, int y);
+int main(void) {
+    int a, b;
+    scanf("%d %d", &a, &b);
+ 
+    print_sub(a, b);
+}
+void print_sub(int x, int y) {
+    if (x > y)   printf("%.lf", pow(x, 2) - pow(y, 2));
+    else printf("%.lf", pow(y, 2) - pow(x, 2));
+}
+
+
+(5)
+#include <stdio.h>
+int sum(int x, int y, int z);
+int main(void)
+{
+    int a[4][4] = { 0 };
+    int i, j;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf_s("%d", &a[i][j]);
+        }
+    }
+
+    for (i = 0; i < 4; i++)
+        a[i][3] = sum(a[i][0], a[i][1], a[i][2]);
+
+    for (i = 0; i < 4; i++)
+        a[3][i] = sum(a[0][i], a[1][i], a[2][i]);
+
+    for (i = 0; i < 4; i++) {
+        for (j = 0; j < 4; j++)
+            printf("%d ", a[i][j]);
+        printf("\n");
+    }
+}
+int sum(int x, int y, int z) {
+    return x + y + z;
+}
+
+
+
+
+
+
+
